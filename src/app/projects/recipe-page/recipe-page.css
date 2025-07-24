@@ -1,0 +1,12 @@
+.recipe-page {
+    background-color: hsl(30, 54%, 90%);
+}
+
+.text-brown-800 {
+    color: hsl(14, 45%, 36%)
+}
+
+.list-marker-brown-800::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}

@@ -3,7 +3,16 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {SidebarLayout} from "@/app/catalyst-components/sidebar-layout";
 import {Navbar} from "@/app/catalyst-components/navbar";
-import {Sidebar} from "@/app/catalyst-components/sidebar";
+import {
+    Sidebar,
+    SidebarBody,
+    SidebarHeader,
+    SidebarHeading,
+    SidebarItem,
+    SidebarLabel, SidebarSection
+} from "@/app/catalyst-components/sidebar";
+import {NewspaperIcon} from "@heroicons/react/20/solid";
+import {Avatar} from "@/app/catalyst-components/avatar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +46,21 @@ export default function RootLayout({
             }
             sidebar={
                 <Sidebar>
+                    <SidebarHeader>
+                        <SidebarItem href="/">
+                            <Avatar src={'/general/react.svg'} alt={'react-logo'} />
+                            <SidebarLabel>JMA Web Portfolio</SidebarLabel>
+                        </SidebarItem>
+                    </SidebarHeader>
+                    <SidebarBody>
+                        <SidebarSection>
+                            <SidebarHeading>Projects</SidebarHeading>
+                            <SidebarItem href="/projects/recipe-page">
+                                <NewspaperIcon />
+                                <SidebarLabel>Recipe Page</SidebarLabel>
+                            </SidebarItem>
+                        </SidebarSection>
+                    </SidebarBody>
                 </Sidebar>
             }
         >
